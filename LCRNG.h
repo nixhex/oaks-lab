@@ -4,16 +4,18 @@
 #include <vector>
 #include <array>
 #include <unordered_set>
-#define A_32BIT_FWD 0x41C64E6D
-#define B_32BIT_FWD 0x6073
-#define A_32BIT_REV 0xEEB9EB65
-#define B_32BIT_REV 0x0A3561A1
-#define IV_DEF_MASK 0b111110000000000
-#define IV_ATK_MASK 0b000001111100000
-#define IV_HP_MASK 0b000000000011111
-#define IV_SPD_MASK IV_DEF_MASK
-#define IV_SPA_MASK IV_ATK_MASK
-#define IV_SPE_MASK IV_HP_MASK
+
+const uint32_t A_32BIT_FWD = 0x41C64E6D;
+const uint32_t B_32BIT_FWD = 0x6073;
+const uint32_t A_32BIT_REV = 0xEEB9EB65;
+const uint32_t B_32BIT_REV = 0x0A3561A1;
+const uint32_t IV_DEF_MASK = 0b111110000000000;
+const uint32_t IV_ATK_MASK = 0b000001111100000;
+const uint32_t IV_HP_MASK = 0b000000000011111;
+const uint32_t IV_SPD_MASK = IV_DEF_MASK;
+const uint32_t IV_SPA_MASK = IV_ATK_MASK;
+const uint32_t IV_SPE_MASK = IV_HP_MASK;
+
 typedef char METHOD;
 typedef uint32_t SEED_32;
 typedef uint32_t PID;
@@ -21,11 +23,13 @@ typedef uint16_t SEED_16;
 typedef uint16_t CALL_16;
 typedef uint8_t IV_RANGE;
 typedef uint8_t GENDER_NUMBER;
+
 typedef struct {
     SEED_32 seed32;
     SEED_16 seed16;
     int frames;
 } SeedMatch;
+
 class LCRNG
 {
 public:
@@ -53,4 +57,5 @@ protected:
 	uint32_t B, B_Rev;
 	SEED_32 seed = 0;
 };
+
 
