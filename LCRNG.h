@@ -51,11 +51,18 @@ public:
     static std::vector<SeedMatch> SeekGBASeeds(const std::vector<SEED_32> &targets,
                                                const std::vector<SEED_16> &filter,
                                                int maxFrames);
-    static const std::string natures[25];
+    static inline const std::string natures[25] = { 
+		"Hardy", "Lonely", "Brave", "Adamant", "Naughty",
+		"Bold", "Docile", "Relaxed", "Impish", "Lax",
+		"Timid", "Hasty", "Serious", "Jolly", "Naive",
+		"Modest", "Mild", "Quiet", "Bashful", "Rash",
+		"Calm", "Gentle", "Sassy", "Careful", "Quirky" 
+	};
 protected:
 	uint32_t A, A_Rev;
 	uint32_t B, B_Rev;
 	SEED_32 seed = 0;
 };
+
 
 
