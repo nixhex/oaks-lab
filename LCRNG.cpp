@@ -3,12 +3,6 @@
 #include <algorithm>
 //#include <iostream>
 
-const std::string LCRNG::natures[25] = { "Hardy", "Lonely", "Brave", "Adamant", "Naughty",
-"Bold", "Docile", "Relaxed", "Impish", "Lax",
-"Timid", "Hasty", "Serious", "Jolly", "Naive",
-"Modest", "Mild", "Quiet", "Bashful", "Rash",
-"Calm", "Gentle", "Sassy", "Careful", "Quirky" };
-
 LCRNG::LCRNG(uint32_t a, uint32_t b, uint32_t aRev, uint32_t bRev, SEED_32 seed)
 {
 	A = a;
@@ -168,3 +162,4 @@ std::vector<SeedMatch> LCRNG::SeekGBASeeds(const std::vector<SEED_32> &targets,
     }
     return seedMatches;
 }
+
